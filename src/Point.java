@@ -1,17 +1,25 @@
 public class Point {
 
-    private double coordinates;
+    private double x;
+    private double y;
 
     Point() {
 
     }
 
-    public double getCoordinates() {
-        return coordinates;
+    public double getX() {
+        return x;
     }
 
-    public void setCoordinates(double coordinates) {
-        this.coordinates = coordinates;
+    public void setX(double x) {
+        this.x = x;
     }
 
+    public double getY() {
+        return y;
+    }
+
+    public void setY(double y) {
+        this.y = y;
+    }
 }

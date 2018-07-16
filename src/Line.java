@@ -1,31 +1,15 @@
 public class Line {
+    Point start;
+    Point end;
 
-    private Point startPoint = new Point();
-    private Point endPoint = new Point();
-
-    Line() {
-
+    public Line(Point start, Point end) {
+        this.start = start;
+        this.end = end;
     }
 
-    public void setStartPoint(Point startPoint) {
-        this.startPoint = startPoint;
-    }
-
-    public void setEndPoint(Point endPoint) {
-        this.endPoint = endPoint;
-    }
-
-    public Point getStartPoint() {
-
-        return startPoint;
-    }
-
-    public Point getEndPoint() {
-        return endPoint;
-    }
-
-    void showInfo() {
-        System.out.println("Punkt początkowy: " + startPoint.getCoordinates() + "\nPunkt końcowy: " + endPoint.getCoordinates() + "\n");
+    void showInfo(Point startPoint, Point endPoint) {
+        System.out.println("Punkt początkowy: " + startPoint.getX() + ", " + startPoint.getY() + "\nPunkt końcowy: "
+                + endPoint.getX() + ", " + endPoint.getY() + "\n");
     }
 
 }
