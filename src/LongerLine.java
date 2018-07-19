@@ -1,15 +1,17 @@
 public class LongerLine {
 
     double lineLenght(Line line) {
-        return Math.sqrt((line.end.getX() - line.start.getX()) * (line.end.getX() - line.start.getX())
-                + (line.end.getY() - line.start.getY()) * (line.end.getY() - line.start.getY()));
+        return Math.sqrt((line.getEnd().getX() - line.getStart().getX()) * (line.getEnd().getX() - line.getStart().getX())
+                + (line.getEnd().getY() - line.getStart().getY()) * (line.getEnd().getY() - line.getStart().getY()));
     }
 
-    void whichLineLonger(Line line1, Line line2) {
+    Line whichLineLonger(Line line1, Line line2) {
         if (lineLenght(line1) > lineLenght(line2)) {
-            System.out.println("\nOdcinek Pierwszy jest większy");
+            return line1;
         } else if (lineLenght(line1) < lineLenght(line2)) {
-            System.out.println("\nOdcinek Drugi jest większy");
-        }else System.out.println("\nOdcinki są sobie równe");
+            return line2;
+
+        }
+        return null;
     }
 }
